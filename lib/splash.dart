@@ -18,6 +18,7 @@ class splash_screan extends StatelessWidget {
           ),
         ),
         nextScreen: Home_Screan(),
+        splashIconSize: double.infinity,backgroundColor: Colors.pink,
         duration: 5000,
   );
   }
