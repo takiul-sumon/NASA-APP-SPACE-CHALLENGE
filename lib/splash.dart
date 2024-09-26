@@ -8,18 +8,23 @@ class splash_screan extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedSplashScreen(
-        splash: Container(
-          height: 300,
-          width: 400,
-          child: Center(
-            child: Lottie.asset(
-                'assets/animation/75.json'),
-          ),
-        ),
-        nextScreen: Home_Screan(),
-        splashIconSize: double.infinity,backgroundColor: Colors.pink,
-        duration: 5000,
-  );
+    //   return AnimatedSplashScreen(
+    //       splash: Container(
+    //         height: 300,
+    //         width: 400,
+    //         child: Center(
+    //           child: Lottie.asset(
+    //               'assets/animation/75.json'),
+    //         ),
+    //       ),
+    //       nextScreen: Home_Screan(),
+    //       splashIconSize: double.infinity,backgroundColor: Colors.transparent,
+    //       duration: 5000,
+    // );
+    return AnimatedSplashScreen(splash: Image.asset("assets/animation/agroai.png",
+        
+    
+    fit: BoxFit.contain,
+    ),nextScreen: Home_Screan(),);
   }
 }
