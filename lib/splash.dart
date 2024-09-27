@@ -28,38 +28,38 @@ class _splash_screanState extends State<splash_screan> {
   
   @override
   Widget build(BuildContext context) {
-    //   return AnimatedSplashScreen(
-    //       splash: Container(
-    //         height: 300,
-    //         width: 400,
-    //         child: Center(
-    //           child: Lottie.asset(
-    //               'assets/animation/75.json'),
-    //         ),
-    //       ),
-    //       nextScreen: Home_Screan(),
-    //       splashIconSize: double.infinity,backgroundColor: Colors.transparent,
-    //       duration: 5000,
-    // );
-    return Scaffold(
-      body: Container(
-      child:  Column(
-        mainAxisAlignment: 
-        MainAxisAlignment.center,children: [
+      return AnimatedSplashScreen(
+          splash: Container(
+            height: 300,
+            width: 400,
+            child: Center(
+              child: Lottie.asset(
+                  'assets/animation/Flow 1.json'),
+            ),
+          ),
+          nextScreen: Home_Screan(),
+          splashIconSize: double.infinity,backgroundColor: Colors.transparent,
+          // duration: 750,
+    );
+    // return Scaffold(
+    //   body: Container(
+    //   child:  Column(
+    //     mainAxisAlignment: 
+    //     MainAxisAlignment.center,children: [
 
-      // AnimatedSplashScreen(
-      //     splash: Center(
-      //       child: Lottie.asset(
-      //           'assets/animation/75.json'),
-      //     ),
-      //     nextScreen: Home_Screan(),
-      //     backgroundColor: Colors.transparent,
-      //     duration: 5000,
+    //   // AnimatedSplashScreen(
+    //   //     splash: Center(
+    //   //       child: Lottie.asset(
+    //   //           'assets/animation/75.json'),
+    //   //     ),
+    //   //     nextScreen: Home_Screan(),
+    //   //     backgroundColor: Colors.transparent,
+    //   //     duration: 5000,
 
-      // ),
-      Image.asset("assets/animation/agroai.png")],),)
+    //   // ),
+    //   Image.asset("assets/animation/agroai.png")],),)
     
       
-    );
-  }
-}
+  //   );
+  // }
+  }}

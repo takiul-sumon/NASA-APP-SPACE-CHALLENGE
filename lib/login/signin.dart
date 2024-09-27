@@ -1,14 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:nasa_challenge/login/colors.dart';
+import './reusablewidget.dart';
 
 class Signin extends StatefulWidget {
   const Signin({super.key});
+  
 
   @override
   State<Signin> createState() => _SigninState();
 }
 
 class _SigninState extends State<Signin> {
+  TextEditingController _emailcontroller = TextEditingController();
+  TextEditingController _passwordcontroller = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,17 +31,19 @@ class _SigninState extends State<Signin> {
             padding: EdgeInsets.fromLTRB(
                 20, MediaQuery.of(context).size.height * .2, 20, 0),
             child: Column(
-              children: [logoWidget('assets/animation/agroai.png')],
+              children: [
+                logoWidget('assets/animation/agroai.png'),
+                SizedBox(height: 30),
+                resuabletextfield("Enter UserName", Icons.percent_outlined, false, _emailcontroller),
+                SizedBox(height: 30,),
+                resuabletextfield("Enter Password", Icons.password_outlined, true, _passwordcontroller),
+
+
+              ],
             ),
           ),
         ),
       ),
     );
   }
-}
-
-Image logoWidget(String imagename) {
-  return Image.asset(imagename,
-  fit: BoxFit.fitWidth,
-  width: 240,height: 240,color: Colors.white,);
 }
