@@ -4,7 +4,6 @@ import './reusablewidget.dart';
 
 class Signin extends StatefulWidget {
   const Signin({super.key});
-  
 
   @override
   State<Signin> createState() => _SigninState();
@@ -34,11 +33,17 @@ class _SigninState extends State<Signin> {
               children: [
                 logoWidget('assets/animation/agroai.png'),
                 SizedBox(height: 30),
-                resuabletextfield("Enter UserName", Icons.percent_outlined, false, _emailcontroller),
-                SizedBox(height: 30,),
-                resuabletextfield("Enter Password", Icons.password_outlined, true, _passwordcontroller),
-
-
+                resuabletextfield("Enter UserName", Icons.percent_outlined,
+                    false, _emailcontroller),
+                SizedBox(
+                  height: 30,
+                ),
+                resuabletextfield("Enter Password", Icons.password_outlined,
+                    true, _passwordcontroller),
+                SizedBox(
+                  height: 30,
+                ),
+                signinSignupButton(context, true, () {})
               ],
             ),
           ),
@@ -46,4 +51,30 @@ class _SigninState extends State<Signin> {
       ),
     );
   }
+}
+
+Row signUpOption() {
+  return Row(
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+     const Text(
+        "Don't have account",
+        style: TextStyle(color: Colors.white70),
+      ),
+      GestureDetector(
+        onTap: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => Signin()
+            ),
+          );
+        },
+        child: const Text(
+          " Sign Up",
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+        ),
+      )
+    ],
+  );
 }
