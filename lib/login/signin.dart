@@ -61,20 +61,20 @@ Row signUpOption() {
         "Don't have account",
         style: TextStyle(color: Colors.white70),
       ),
-      GestureDetector(
-        onTap: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => Signin()
-            ),
-          );
-        },
-        child: const Text(
-          " Sign Up",
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-        ),
-      )
+      // GestureDetector(
+      //   onTap: () {
+      //     Navigator.push(
+      //       context,
+      //       MaterialPageRoute(
+      //         builder: (context) => Signin()
+      //       ),
+      //     );
+      //   },
+      //   child: const Text(
+      //     " Sign Up",
+      //     style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+      //   ),
+      // )
     ],
   );
 }
