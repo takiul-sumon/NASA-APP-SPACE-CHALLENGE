@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:nasa_challenge/login/colors.dart';
+import 'package:nasa_challenge/login/signup.dart';
 import './reusablewidget.dart';
 
 class Signin extends StatefulWidget {
@@ -17,7 +18,8 @@ class _SigninState extends State<Signin> {
     return Scaffold(
       body: Container(
         width: MediaQuery.of(context).size.width,
-        height: MediaQuery.of(context).size.width,
+        height: double.infinity,
+        // height: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
           gradient: LinearGradient(colors: [
             hexStringColor("378B29"),
@@ -43,7 +45,8 @@ class _SigninState extends State<Signin> {
                 SizedBox(
                   height: 30,
                 ),
-                signinSignupButton(context, true, () {})
+                signinSignupButton(context, true, () {}),
+                signUpOption()
               ],
             ),
           ),
@@ -53,28 +56,24 @@ class _SigninState extends State<Signin> {
   }
 }
 
+
 Row signUpOption() {
   return Row(
-    mainAxisAlignment: MainAxisAlignment.center,
+    mainAxisAlignment: MainAxisAlignment.end,
     children: [
-     const Text(
+      Text(
         "Don't have account",
-        style: TextStyle(color: Colors.white70),
+        style: TextStyle(color: Colors.white),
       ),
-      // GestureDetector(
-      //   onTap: () {
-      //     Navigator.push(
-      //       context,
-      //       MaterialPageRoute(
-      //         builder: (context) => Signin()
-      //       ),
-      //     );
-      //   },
-      //   child: const Text(
-      //     " Sign Up",
-      //     style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-      //   ),
-      // )
+      GestureDetector(
+        onTap: () {
+          Navigator.push( context, MaterialPageRoute(builder:(context)=> SignupScrean() ));
+        },
+        child:  Text(
+          " Sign Up",
+          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+        ),
+      )
     ],
   );
 }

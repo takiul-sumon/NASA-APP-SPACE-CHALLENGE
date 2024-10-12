@@ -2,6 +2,8 @@ import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 import 'package:nasa_challenge/login/mainpage.dart';
+import 'package:nasa_challenge/login/signin.dart';
+import 'package:nasa_challenge/login/signup.dart';
 
 
 class splash_screan extends StatefulWidget {
@@ -24,7 +26,7 @@ class _splash_screanState extends State<splash_screan> {
                   'assets/animation/Flow 1.json'),
             ),
           ),
-          nextScreen: WebViewPage(),
+          nextScreen: Signin(),
           splashIconSize: double.infinity,backgroundColor: Colors.transparent,
           duration: 750,
     );
