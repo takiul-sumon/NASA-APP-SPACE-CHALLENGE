@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "994057046118",
+    "project_id": "signin-1caf3",
+    "storage_bucket": "signin-1caf3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:994057046118:android:796bb2715a8005544905a7",
+        "android_client_info": {
+          "package_name": "com.example.nasa_challenge"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpUbsz1M7rEfsIgaSUV6GGx70jZfQrQUc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

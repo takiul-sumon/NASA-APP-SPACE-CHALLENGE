@@ -54,26 +54,26 @@ class _SigninState extends State<Signin> {
       ),
     );
   }
-}
 
-
-Row signUpOption() {
-  return Row(
-    mainAxisAlignment: MainAxisAlignment.end,
-    children: [
-      Text(
-        "Don't have account",
-        style: TextStyle(color: Colors.white),
-      ),
-      GestureDetector(
-        onTap: () {
-          Navigator.push( context, MaterialPageRoute(builder:(context)=> SignupScrean() ));
-        },
-        child:  Text(
-          " Sign Up",
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+  Row signUpOption() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+          "Don't have account",
+          style: TextStyle(color: Colors.white),
         ),
-      )
-    ],
-  );
+        GestureDetector(
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => SignupScrean()));
+          },
+          child: Text(
+            " Sign Up",
+            style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+          ),
+        )
+      ],
+    );
+  }
 }
