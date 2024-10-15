@@ -1,8 +1,11 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:nasa_challenge/splash.dart';
 
-void main() {
-  runApp(nasa_challenge());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(const nasa_challenge());
 }
 
 class nasa_challenge extends StatefulWidget {
@@ -17,7 +20,6 @@ class _nasa_challengeState extends State<nasa_challenge> {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      
       home: splash_screan(),
     );
   }

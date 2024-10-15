@@ -1,4 +1,6 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:nasa_challenge/home_screan.dart';
 import 'package:nasa_challenge/login/colors.dart';
 import 'package:nasa_challenge/login/signup.dart';
 import './reusablewidget.dart';
@@ -45,7 +47,18 @@ class _SigninState extends State<Signin> {
                 SizedBox(
                   height: 30,
                 ),
-                signinSignupButton(context, true, () {}),
+                signinSignupButton(context, true, () {
+                  FirebaseAuth.instance
+                      .createUserWithEmailAndPassword(
+                          email: _emailcontroller.text,
+                          password: _passwordcontroller.text)
+                      .then((value) {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => Home_Screan()));
+                  }).onError((error, stackTrace) {
+                    print("ERROR");
+                  });
+                }),
                 signUpOption()
               ],
             ),
