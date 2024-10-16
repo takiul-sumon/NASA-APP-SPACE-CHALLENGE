@@ -7,6 +7,25 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:994057046118:android:2f87d7d3fa6c7b5b4905a7",
+        "android_client_info": {
+          "package_name": "Signup.com"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpUbsz1M7rEfsIgaSUV6GGx70jZfQrQUc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:994057046118:android:796bb2715a8005544905a7",
         "android_client_info": {
           "package_name": "com.example.nasa_challenge"
