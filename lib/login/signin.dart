@@ -1,9 +1,11 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:nasa_challenge/firebase_options.dart';
 import 'package:nasa_challenge/home_screan.dart';
 import 'package:nasa_challenge/login/colors.dart';
 import 'package:nasa_challenge/login/signup.dart';
 import './reusablewidget.dart';
+import '../firebase_options.dart';
 
 class Signin extends StatefulWidget {
   const Signin({super.key});
@@ -49,7 +51,7 @@ class _SigninState extends State<Signin> {
                 ),
                 signinSignupButton(context, true, () {
                   FirebaseAuth.instance
-                      .createUserWithEmailAndPassword(
+                      .signInWithEmailAndPassword(
                           email: _emailcontroller.text,
                           password: _passwordcontroller.text)
                       .then((value) {
@@ -89,4 +91,39 @@ class _SigninState extends State<Signin> {
       ],
     );
   }
+}
+
+Container signinSignupButton(
+    BuildContext context, bool isLogin, Function onTap) {
+  return Container(
+    width: MediaQuery.of(context).size.width,
+    height: 50,
+    margin: EdgeInsets.fromLTRB(0, 10, 0, 20),
+    decoration: BoxDecoration(borderRadius: BorderRadius.circular(90)),
+    child: ElevatedButton(
+      onPressed: () {
+        onTap;
+      },
+      child: Text(isLogin ? 'LOG IN' : 'SIGN UP',
+          style: TextStyle(
+              color: Colors.black87,
+              fontWeight: FontWeight.bold,
+              fontSize: 16)),
+      style: ButtonStyle(
+        backgroundColor: MaterialStateProperty.resolveWith(
+          (states) {
+            if (states.contains(MaterialState.pressed)) {
+              return Colors.black26;
+            }
+            return Colors.white;
+          },
+        ),
+        shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+          RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(30),
+          ),
+        ),
+      ),
+    ),
+  );
 }
