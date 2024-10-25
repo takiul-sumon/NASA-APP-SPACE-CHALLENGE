@@ -7,9 +7,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:994057046118:android:2f87d7d3fa6c7b5b4905a7",
+        "mobilesdk_app_id": "1:994057046118:android:86e5b7d8545039a34905a7",
         "android_client_info": {
-          "package_name": "Signup.com"
+          "package_name": "com.android.application"
         }
       },
       "oauth_client": [],
